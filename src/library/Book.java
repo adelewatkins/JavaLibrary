@@ -2,15 +2,15 @@ package library;
 
 public class Book extends Item {
 
-	private boolean fiction;
+	private boolean hardback;
 
 	public Book() {
 		super();
 	}
 
-	public Book(String title, String author, int page, boolean fiction) {
+	public Book(String title, String author, int page, boolean hardback) {
 		super(title, author, page);
-		this.fiction = fiction;
+		this.hardback = hardback;
 	}
 
 	@Override
@@ -19,18 +19,18 @@ public class Book extends Item {
 		return 12;
 	}
 
-	public boolean isFiction() {
-		return fiction;
+	public boolean isHardback() {
+		return hardback;
 	}
 
-	public void setFiction(boolean fiction) {
-		this.fiction = fiction;
+	public void setHardback(boolean hardback) {
+		this.hardback = hardback;
 	}
 
 	@Override
 	public String toString() {
 		return "Book [ID = " + getId() + ", Title = " + getTitle() + ", Author = " + getAuthor() + ", Pages = "
-				+ getPage() + ", Fiction? = " + fiction + "]";
+				+ getPage() + ", Hardback? = " + hardback + "]";
 	}
 
 }

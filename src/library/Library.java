@@ -6,6 +6,7 @@ public class Library {
 
 	private String name;
 	private ArrayList<Item> items = new ArrayList<>();
+	private ArrayList<Person> persons = new ArrayList<>();
 
 	public Library(String name) {
 		super();
@@ -33,9 +34,22 @@ public class Library {
 		return false;
 	}
 
+	public void addCustomer(Person person) {
+		persons.add(person);
+	}
+
+	public boolean removeCustomer(int personalId) {
+		for (Person person : this.persons) {
+			if (personalId == person.getPersonalId()) {
+				return this.persons.remove(person);
+			}
+		}
+		return false;
+	}
+
 	@Override
 	public String toString() {
-		return "Library [Library Name = " + name + ", items = " + items + "]";
+		return "Library [Library Name = " + name + ", Items = " + items + ", Customers = " + persons + "]";
 	}
 
 	public double stock() {

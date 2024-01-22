@@ -15,14 +15,28 @@ public class App {
 		myLibrary.checkIn(new Magazine("Kingsland Chronicle Jan", "KPC", 30, 16));
 		myLibrary.checkIn(book1);
 		myLibrary.checkIn(mag1);
+		myLibrary.checkIn(new Magazine("Good Food: Dec2023", "BBC", 50, 25));
 
 		uniLibrary.checkIn(diss1);
+		uniLibrary.checkIn(new Dissertation("Chickens Prefer Beautiful Humans", "S. Ghirlanda", 80, "Photography"));
+		uniLibrary.checkIn(new Dissertation("Jesus Potter Harry Christ", "Derek Murphy", 210, "R.E"));
+
+		Person p1 = new Person("Adele", true);
+		myLibrary.addCustomer(p1);
+		myLibrary.addCustomer(new Person("Agustina", true));
+
+		uniLibrary.addCustomer(new Person("Mike", false));
+		uniLibrary.addCustomer(new Person("Treesa", true));
+		uniLibrary.addCustomer(new Person("Liam", true));
 
 		System.out.println(myLibrary);
 		System.out.println(uniLibrary);
-
 		myLibrary.stock();
 		uniLibrary.stock();
+
+		uniLibrary.removeCustomer(4);
+		myLibrary.checkOut(6);
+
 	}
 
 }
