@@ -34,7 +34,7 @@ public class App {
 		myLibrary.stock();
 		uniLibrary.stock();
 
-		uniLibrary.removeCustomer(4);
+		uniLibrary.removeCustomer(3);
 		myLibrary.checkOut(6);
 
 	}
